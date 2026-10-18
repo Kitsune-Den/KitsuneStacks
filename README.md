@@ -15,3 +15,7 @@ patch simply no-ops rather than causing errors.
 
 Copy the `KitsuneStacks` folder into your `7 Days To Die/Mods/` directory and
 restart the game. EAC does not need to be off (config-only modlet).
+
+## License
+
+[CC BY-NC-SA 4.0](LICENSE), with an extra permission for servers that make money: see [NOTICE.md](NOTICE.md). In short: play it, change it and share it, with credit, not for sale, and with changed versions under the same license.

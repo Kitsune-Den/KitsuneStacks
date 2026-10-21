@@ -33,4 +33,12 @@
   <set xpath="//item[@name='smallEngine']/property[@name='Stacknumber']/@value">12</set>
   <set xpath="//item[@name='resourceLockPick']/property[@name='Stacknumber']/@value">500</set>
   <set xpath="//item[@name='resourceLockPickBundle']//property[@name='Create_item_count']/@value">500</set> <!-- Lockpick Bundles -->
+
+  <!-- Kitsune Foxacary's medical items stack like the vanilla ones above. Only when
+       Foxacary is installed, so there's no "did not apply" warning without it. -->
+  <conditional>
+    <if cond="mod_loaded('KitsuneFoxacary')">
+      <set xpath="//item[starts-with(@name, 'foxacary')]/property[@name='Stacknumber']/@value">50</set>
+    </if>
+  </conditional>
 </configs>

@@ -18,9 +18,7 @@
   <set xpath="//item[@name='resourceGunPowderBundle']//property[@name='Create_item_count']/@value">1000</set>  <!-- Gun Powder Bundles (balance carve-out) -->
 
   <!-- Exceptions & Misc -->
-  <set xpath="//item[@name='ammoJunkTurretRegular']/property[@name='Stacknumber']/@value">5000</set>
-  <set xpath="//item[@name='ammoJunkTurretShell']/property[@name='Stacknumber']/@value">5000</set>  <!-- V2.5 Junk Turret Shell Ammo -->
-  <set xpath="//item[@name='ammoJunkTurretAP']/property[@name='Stacknumber']/@value">5000</set>  <!-- V2.5 Junk Turret AP Ammo -->
+  <set xpath="//item[@name='ammoJunkTurretRegular']/property[@name='Stacknumber']/@value">5000</set>  <!-- Junk Turret ammo. Shell and AP inherit this through Extends, so they stack to 5000 too -->
   <set xpath="//item[starts-with(@name, 'ammoBundleJunkTurret')]//property[@name='Create_item_count']/@value">5000</set>  <!-- Junk Turret Ammo Bundles -->
   <set xpath="//item[@name='ammoGasCan']/property[@name='Stacknumber']/@value">30000</set>
   <set xpath="//item[@name='ammoGasCanBundle']//property[@name='Create_item_count']/@value">30000</set>  <!-- Gas Can Bundles -->
@@ -35,4 +33,12 @@
   <set xpath="//item[@name='smallEngine']/property[@name='Stacknumber']/@value">12</set>
   <set xpath="//item[@name='resourceLockPick']/property[@name='Stacknumber']/@value">500</set>
   <set xpath="//item[@name='resourceLockPickBundle']//property[@name='Create_item_count']/@value">500</set> <!-- Lockpick Bundles -->
+
+  <!-- Kitsune Foxacary's medical items stack like the vanilla ones above. Only when
+       Foxacary is installed, so there's no "did not apply" warning without it. -->
+  <conditional>
+    <if cond="mod_loaded('KitsuneFoxacary')">
+      <set xpath="//item[starts-with(@name, 'foxacary')]/property[@name='Stacknumber']/@value">50</set>
+    </if>
+  </conditional>
 </configs>
